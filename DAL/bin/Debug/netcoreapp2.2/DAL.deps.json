@@ -1,0 +1,229 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": "5b6f7838d792f26ec923eb3e78c9cff97a6613d8"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "DAL/1.0.0": {
+        "dependencies": {
+          "ChatAppUtils": "1.0.0",
+          "System.Data.SqlClient": "4.5.0.0"
+        },
+        "runtime": {
+          "DAL.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration/2.2.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.18315"
+          }
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/2.2.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.18315"
+          }
+        }
+      },
+      "Microsoft.Extensions.Primitives/2.2.0": {
+        "dependencies": {
+          "System.Memory": "4.5.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {
+            "assemblyVersion": "2.2.0.0",
+            "fileVersion": "2.2.0.18315"
+          }
+        }
+      },
+      "System.Configuration.ConfigurationManager/4.5.0": {
+        "dependencies": {
+          "System.Security.Cryptography.ProtectedData": "4.5.0",
+          "System.Security.Permissions": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "System.Memory/4.5.1": {},
+      "System.Runtime.CompilerServices.Unsafe/4.5.1": {
+        "runtime": {
+          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "System.Security.AccessControl/4.5.0": {
+        "dependencies": {
+          "System.Security.Principal.Windows": "4.5.0"
+        },
+        "runtimeTargets": {
+          "runtime/win/lib/_._": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      },
+      "System.Security.Cryptography.ProtectedData/4.5.0": {
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "System.Security.Permissions/4.5.0": {
+        "dependencies": {
+          "System.Security.AccessControl": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Permissions.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26515.6"
+          }
+        }
+      },
+      "System.Security.Principal.Windows/4.5.0": {
+        "runtimeTargets": {
+          "runtime/unix/lib/_._": {
+            "rid": "unix",
+            "assetType": "runtime"
+          },
+          "runtime/win/lib/_._": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      },
+      "ChatAppUtils/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "2.2.0",
+          "System.Configuration.ConfigurationManager": "4.5.0"
+        },
+        "runtime": {
+          "ChatAppUtils.dll": {}
+        }
+      },
+      "System.Data.SqlClient/4.5.0.0": {
+        "runtime": {
+          "System.Data.SqlClient.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "4.6.27110.4"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.Configuration/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nOP8R1mVb/6mZtm2qgAJXn/LFm/2kMjHDAg/QJLFG6CuWYJtaD3p1BwQhufBVvRzL9ceJ/xF0SQ0qsI2GkDQAA==",
+      "path": "microsoft.extensions.configuration/2.2.0",
+      "hashPath": "microsoft.extensions.configuration.2.2.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Configuration.Abstractions/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-65MrmXCziWaQFrI0UHkQbesrX5wTwf9XPjY5yFm/VkgJKFJ5gqvXRoXjIZcf2wLi5ZlwGz/oMYfyURVCWbM5iw==",
+      "path": "microsoft.extensions.configuration.abstractions/2.2.0",
+      "hashPath": "microsoft.extensions.configuration.abstractions.2.2.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.Primitives/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-azyQtqbm4fSaDzZHD/J+V6oWMFaf2tWP4WEGIYePLCMw3+b2RQdj9ybgbQyjCshcitQKQ4lEDOZjmSlTTrHxUg==",
+      "path": "microsoft.extensions.primitives/2.2.0",
+      "hashPath": "microsoft.extensions.primitives.2.2.0.nupkg.sha512"
+    },
+    "System.Configuration.ConfigurationManager/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-UIFvaFfuKhLr9u5tWMxmVoDPkFeD+Qv8gUuap4aZgVGYSYMdERck4OhLN/2gulAc0nYTEigWXSJNNWshrmxnng==",
+      "path": "system.configuration.configurationmanager/4.5.0",
+      "hashPath": "system.configuration.configurationmanager.4.5.0.nupkg.sha512"
+    },
+    "System.Memory/4.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sDJYJpGtTgx+23Ayu5euxG5mAXWdkDb4+b0rD0Cab0M1oQS9H0HXGPriKcqpXuiJDTV7fTp/d+fMDJmnr6sNvA==",
+      "path": "system.memory/4.5.1",
+      "hashPath": "system.memory.4.5.1.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Zh8t8oqolRaFa9vmOZfdQm/qKejdqz0J9kr7o2Fu0vPeoH3BL1EOXipKWwkWtLT1JPzjByrF19fGuFlNbmPpiw==",
+      "path": "system.runtime.compilerservices.unsafe/4.5.1",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512"
+    },
+    "System.Security.AccessControl/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vW8Eoq0TMyz5vAG/6ce483x/CP83fgm4SJe5P8Tb1tZaobcvPrbMEL7rhH1DRdrYbbb6F0vq3OlzmK0Pkwks5A==",
+      "path": "system.security.accesscontrol/4.5.0",
+      "hashPath": "system.security.accesscontrol.4.5.0.nupkg.sha512"
+    },
+    "System.Security.Cryptography.ProtectedData/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wLBKzFnDCxP12VL9ANydSYhk59fC4cvOr9ypYQLPnAj48NQIhqnjdD2yhP8yEKyBJEjERWS9DisKL7rX5eU25Q==",
+      "path": "system.security.cryptography.protecteddata/4.5.0",
+      "hashPath": "system.security.cryptography.protecteddata.4.5.0.nupkg.sha512"
+    },
+    "System.Security.Permissions/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9gdyuARhUR7H+p5CjyUB/zPk7/Xut3wUSP8NJQB6iZr8L3XUXTMdoLeVAg9N4rqF8oIpE7MpdqHdDHQ7XgJe0g==",
+      "path": "system.security.permissions/4.5.0",
+      "hashPath": "system.security.permissions.4.5.0.nupkg.sha512"
+    },
+    "System.Security.Principal.Windows/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-U77HfRXlZlOeIXd//Yoj6Jnk8AXlbeisf1oq1os+hxOGVnuG+lGSfGqTwTZBoORFF6j/0q7HXIl8cqwQ9aUGqQ==",
+      "path": "system.security.principal.windows/4.5.0",
+      "hashPath": "system.security.principal.windows.4.5.0.nupkg.sha512"
+    },
+    "ChatAppUtils/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Data.SqlClient/4.5.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

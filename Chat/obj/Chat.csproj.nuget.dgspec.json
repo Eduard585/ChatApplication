@@ -1,0 +1,209 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Semenkin.E\\Source\\Repos\\Chat\\Chat\\Chat.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Semenkin.E\\Source\\Repos\\Chat\\ChatAppUtils\\ChatAppUtils.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Semenkin.E\\Source\\Repos\\Chat\\ChatAppUtils\\ChatAppUtils.csproj",
+        "projectName": "ChatAppUtils",
+        "projectPath": "C:\\Users\\Semenkin.E\\Source\\Repos\\Chat\\ChatAppUtils\\ChatAppUtils.csproj",
+        "packagesPath": "C:\\Users\\Semenkin.E\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Semenkin.E\\Source\\Repos\\Chat\\ChatAppUtils\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Semenkin.E\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Semenkin.E\\Source\\Repos\\ChatApp\\ChatApp\\obj": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "System.Configuration.ConfigurationManager": {
+              "target": "Package",
+              "version": "[4.5.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\Semenkin.E\\Source\\Repos\\Chat\\Chat\\Chat.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Semenkin.E\\Source\\Repos\\Chat\\Chat\\Chat.csproj",
+        "projectName": "Chat",
+        "projectPath": "C:\\Users\\Semenkin.E\\Source\\Repos\\Chat\\Chat\\Chat.csproj",
+        "packagesPath": "C:\\Users\\Semenkin.E\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Semenkin.E\\Source\\Repos\\Chat\\Chat\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Semenkin.E\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Semenkin.E\\Source\\Repos\\ChatApp\\ChatApp\\obj": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\Semenkin.E\\Source\\Repos\\Chat\\ChatAppUtils\\ChatAppUtils.csproj": {
+                "projectPath": "C:\\Users\\Semenkin.E\\Source\\Repos\\Chat\\ChatAppUtils\\ChatAppUtils.csproj"
+              },
+              "C:\\Users\\Semenkin.E\\Source\\Repos\\Chat\\DAL\\DAL.csproj": {
+                "projectPath": "C:\\Users\\Semenkin.E\\Source\\Repos\\Chat\\DAL\\DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "C:\\Users\\Semenkin.E\\Source\\Repos\\Chat\\DAL\\DAL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Semenkin.E\\Source\\Repos\\Chat\\DAL\\DAL.csproj",
+        "projectName": "DAL",
+        "projectPath": "C:\\Users\\Semenkin.E\\Source\\Repos\\Chat\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\Semenkin.E\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Semenkin.E\\Source\\Repos\\Chat\\DAL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Semenkin.E\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\Semenkin.E\\Source\\Repos\\ChatApp\\ChatApp\\obj": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "C:\\Users\\Semenkin.E\\Source\\Repos\\Chat\\ChatAppUtils\\ChatAppUtils.csproj": {
+                "projectPath": "C:\\Users\\Semenkin.E\\Source\\Repos\\Chat\\ChatAppUtils\\ChatAppUtils.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

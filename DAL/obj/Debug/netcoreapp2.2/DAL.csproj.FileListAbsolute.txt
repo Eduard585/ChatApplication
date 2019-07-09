@@ -1,0 +1,16 @@
+C:\Users\Semenkin.E\Source\Repos\Chat\DAL\obj\Debug\netcoreapp2.2\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Semenkin.E\Source\Repos\Chat\DAL\obj\Debug\netcoreapp2.2\DAL.AssemblyInfoInputs.cache
+C:\Users\Semenkin.E\Source\Repos\Chat\DAL\obj\Debug\netcoreapp2.2\DAL.AssemblyInfo.cs
+C:\Users\Semenkin.E\Source\Repos\Chat\DAL\bin\Debug\netcoreapp2.2\DAL.deps.json
+C:\Users\Semenkin.E\Source\Repos\Chat\DAL\bin\Debug\netcoreapp2.2\DAL.runtimeconfig.json
+C:\Users\Semenkin.E\Source\Repos\Chat\DAL\bin\Debug\netcoreapp2.2\DAL.runtimeconfig.dev.json
+C:\Users\Semenkin.E\Source\Repos\Chat\DAL\bin\Debug\netcoreapp2.2\DAL.dll
+C:\Users\Semenkin.E\Source\Repos\Chat\DAL\bin\Debug\netcoreapp2.2\DAL.pdb
+C:\Users\Semenkin.E\Source\Repos\Chat\DAL\bin\Debug\netcoreapp2.2\ChatAppUtils.dll
+C:\Users\Semenkin.E\Source\Repos\Chat\DAL\bin\Debug\netcoreapp2.2\System.Data.SqlClient.dll
+C:\Users\Semenkin.E\Source\Repos\Chat\DAL\bin\Debug\netcoreapp2.2\ChatAppUtils.pdb
+C:\Users\Semenkin.E\Source\Repos\Chat\DAL\bin\Debug\netcoreapp2.2\System.Data.SqlClient.xml
+C:\Users\Semenkin.E\Source\Repos\Chat\DAL\obj\Debug\netcoreapp2.2\DAL.csprojAssemblyReference.cache
+C:\Users\Semenkin.E\Source\Repos\Chat\DAL\obj\Debug\netcoreapp2.2\DAL.csproj.CopyComplete
+C:\Users\Semenkin.E\Source\Repos\Chat\DAL\obj\Debug\netcoreapp2.2\DAL.dll
+C:\Users\Semenkin.E\Source\Repos\Chat\DAL\obj\Debug\netcoreapp2.2\DAL.pdb
