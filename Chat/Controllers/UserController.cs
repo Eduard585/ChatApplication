@@ -8,8 +8,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Chat.Controllers
 {
-    [Route("user")]
+    [Route("api/user")]
     [ApiController]
+    
     public class UserController : ControllerBase
     {
         private readonly UserManager _userManager = new UserManager();
@@ -28,7 +29,7 @@ namespace Chat.Controllers
             {
                 Email = userModel.Email,
                 Login = userModel.Login,
-                Password = userModel.Password,
+                Password = userModel.Password,//TODO create password another way
                 IsBlocked = false,
                 UpdDate = DateTime.Now
             };

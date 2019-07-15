@@ -16,6 +16,7 @@ namespace DAL.UserData
         private const string GetUserByFilterCmd = "spGetUsersByFilter";
         private const string GetUserByFilterCountCmd = "spGetUsersByFilterCount";
         private const string GetUserByFilterCountORCmd = "spGetUsersByFilterCountOR";
+        private const string CheckUserPassrodCmd = "spCheckUserPassword";
         public UserDataProvider()
         {
             _connectionString = ConfigurationAdapter.GetConnectionString("DefaultConnection");
@@ -101,6 +102,22 @@ namespace DAL.UserData
                 cmd.Parameters.AddWithValue("@UpdDate", user.UpdDate);
                 var executeScalar = cmd.ExecuteScalar();
                 return Convert.ToInt64(executeScalar);
+            }
+        }
+
+        public bool CheckUserPassword(string login, string password)
+        {
+            using (var connection = new SqlConnection(_connectionString))
+            using (var cmd = connection.CreateCommand())
+            {
+                connection.Open();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = CheckUserPassrodCmd;               
+                cmd.Parameters.AddWithValue("@login", login);                
+                cmd.Parameters.AddWithValue("@password", password);
+                
+                var executeScalar = cmd.ExecuteScalar();
+                return Convert.ToBoolean(executeScalar);
             }
         }
 

@@ -16,7 +16,52 @@ namespace Chat.UserManagement
         }
         public LoginResult Login(string login, string password)
         {
-            throw new NotImplementedException();
+            var filter = new UserFilter();            
+            if (login.Contains('@'))
+            {
+                filter.Email = login;
+            }
+            else
+            {
+                filter.Login = login;
+            }
+            
+            var users = _userDataProvider.GetUsersByFilter(filter);
+            if (users.Count == 0)
+            {
+                return new LoginResult()
+                {
+                    Error = "User does not exists",
+                    Success = false,
+                    UserId = 0
+                };
+            }
+            if (users[0].IsBlocked)
+            {
+                return new LoginResult()
+                {
+                    Error = "User is blocked",
+                    Success = false,
+                    UserId = 0
+                };
+            }
+
+            if (!_userDataProvider.CheckUserPassword(users[0].Login, password))
+            {
+                return new LoginResult()
+                {
+                    Error = "Invalid password",
+                    Success = false,
+                    UserId = 0
+                };
+            }
+            return new LoginResult()
+            {
+                Error = null,
+                Success = true,
+                UserId = users[0].Id,
+                UserName = users[0].Login
+            };
         }
 
         public User GetUserById(long id)
@@ -83,5 +128,7 @@ namespace Chat.UserManagement
             }
             
         }
+
+        
     }
 }

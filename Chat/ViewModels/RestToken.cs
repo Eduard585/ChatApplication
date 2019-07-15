@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace Chat.ViewModels
 {
-    public class RestUserLogin
+    public class RestToken
     {
-        public string Login { get; set; }
-        public string Password { get; set; }
+        public string AccessToken { get; set; }
+        public int ExpiresIn { get; set; }
     }
 }
