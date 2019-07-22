@@ -28,28 +28,28 @@ namespace Chat.Controllers
 
         [EnableCors("MyPolicy")]
         [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] RestUserLogin userLogin)
+        public IActionResult Login([FromBody] RestUserLogin userLogin)
         {
-            if (!ModelState.IsValid)
+            var login = userLogin.Login;
+            var password = userLogin.Password;
+
+            var loginResult = _userManager.Login(login, password);
+            if (!loginResult.Success)
             {
-                return null;
+                Response.StatusCode = 400;
+                return BadRequest(loginResult.Error);
             }
-
-            var result = _userManager.Login(userLogin.Login, userLogin.Password);
-            if (!result.Success)
+            var response = CreateRestToken(loginResult);
+            Response.ContentType = "application/json";
+            return Ok(new RestToken
             {
-                return BadRequest(Json(result.Error));
-            }
-
-            var user = new IdentityUser {UserName = userLogin.Login};
-
-            await Authenticate(result);
-        
-            return Content(User.Identity.Name);
+                AccessToken = response.AccessToken,
+                ExpiresIn = 1000
+            });
 
         }
 
-        [EnableCors("MyPolicy")]
+        [EnableCors("MyPolicy")]//TODO how to use tokens and login
         [HttpPost("token")]
         public IActionResult Token([FromBody] RestUserLogin userLogin)
         {
@@ -91,13 +91,9 @@ namespace Chat.Controllers
             return response;
         }
 
-        private async Task Authenticate(LoginResult loginResult)
-        {
-            var id = GetIdentity(loginResult);
-            await HttpContext.SignInAsync("ChatAppCookie", new ClaimsPrincipal(id));
-        }
+        
 
-        private ClaimsIdentity GetIdentity(LoginResult loginResult)//TODO add fields to LoginResult and to JWT
+        private ClaimsIdentity GetIdentity(LoginResult loginResult)
         {
             var claims = new List<Claim>
             {

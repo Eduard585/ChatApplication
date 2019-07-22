@@ -1,0 +1,29 @@
+<template>
+  <div>
+    <h1>ROOMLIST</h1><br/>
+    <h1>ROOMLIST</h1><br/>
+    <h1>ROOMLIST</h1><br/>
+    <h1>ROOMLIST</h1><br/>
+    <h1>ROOMLIST</h1><br/>
+    <h1>ROOMLIST</h1><br/>
+    <h1>ROOMLIST</h1><br/>
+    <h1>ROOMLIST</h1><br/>
+    <h1>ROOMLIST</h1><br/>
+    <h1>ROOMLIST</h1><br/>
+    <h1>ROOMLIST</h1><br/>
+    <h1>ROOMLIST</h1><br/>
+    <h1>ROOMLIST</h1><br/>
+    <h1>ROOMLIST</h1><br/>
+    <h1>ROOMLIST</h1><br/>
+    <h1>ROOMLIST</h1><br/>
+    <h1>ROOMLIST</h1><br/>
+    <h1>ROOMLIST</h1><br/>
+    <h1>ROOMLIST</h1><br/>
+    <h1>ROOMLIST</h1><br/>
+  </div>
+</template>
+<script>
+export default {
+  name: "RoomList"
+};
+</script>

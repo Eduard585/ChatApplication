@@ -17,24 +17,12 @@ namespace Chat.Controllers
         [EnableCors("MyPolicy")]
         [HttpPost("registration")]
         public  IActionResult Registration([FromBody]RestUserRegistrationInfo userModel)
-        {
-            var user = CreateUser(userModel);
-            var registrationResult = _userManager.CreateUser(user);
+        {           
+            var registrationResult = _userManager.CreateUser(userModel);
             return Ok(registrationResult);
         }
 
-        private static User CreateUser(RestUserRegistrationInfo userModel)
-        {
-            var user = new User
-            {
-                Email = userModel.Email,
-                Login = userModel.Login,
-                Password = userModel.Password,//TODO create password another way
-                IsBlocked = false,
-                UpdDate = DateTime.Now
-            };
-            return user;
-        }
+        
 
     }
 }

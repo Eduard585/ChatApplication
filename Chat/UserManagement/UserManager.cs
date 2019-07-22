@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Chat.ViewModels;
 using DAL.Models;
 using DAL.UserData;
 
@@ -16,7 +17,7 @@ namespace Chat.UserManagement
         }
         public LoginResult Login(string login, string password)
         {
-            var filter = new UserFilter();            
+            var filter = new UserFilter();
             if (login.Contains('@'))
             {
                 filter.Email = login;
@@ -25,7 +26,7 @@ namespace Chat.UserManagement
             {
                 filter.Login = login;
             }
-            
+
             var users = _userDataProvider.GetUsersByFilter(filter);
             if (users.Count == 0)
             {
@@ -46,7 +47,7 @@ namespace Chat.UserManagement
                 };
             }
 
-            if (!_userDataProvider.CheckUserPassword(users[0].Login, password))
+            if (!CheckUserPassword(password,users[0]))
             {
                 return new LoginResult()
                 {
@@ -79,13 +80,13 @@ namespace Chat.UserManagement
             throw new NotImplementedException();
         }
 
-        public SaveUserResult CreateUser(User user)
+        public SaveUserResult CreateUser(RestUserRegistrationInfo userInfo)
         {
             long userId = 0;
             UserFilter filter = new UserFilter()
             {
-                Email = user.Email,
-                Login = user.Login
+                Email = userInfo.Email,
+                Login = userInfo.Login
             };
             if (_userDataProvider.GetUsersByFilterCountOR(filter) > 0)
             {
@@ -97,24 +98,54 @@ namespace Chat.UserManagement
                     UserId = 0
                 };
             }
+
+            User user = CreateUserModel(userInfo);
             userId = _userDataProvider.SaveUser(user);
-            if (userId == 0)
+            if (userId != 0)
             {
                 return new SaveUserResult()
                 {
-                    Error = "Unable to save user",
-                    IsNew = false,
-                    Success = false,
-                    UserId = 0
+                    Error = "",
+                    IsNew = true,
+                    Success = true,
+                    UserId = userId
                 };
             }
             return new SaveUserResult()
             {
-                Error = null,
-                IsNew = true,
-                Success = true,
-                UserId = userId
+                Error = "Unable to save user",
+                IsNew = false,
+                Success = false,
+                UserId = 0
             };
+        }
+
+
+        private User CreateUserModel(RestUserRegistrationInfo userInfo)
+        {
+            var salt = PasswordUtil.CreateSalt(15);
+            var hash = PasswordUtil.GenerateSaltedHash(userInfo.Password, salt);
+
+
+            User user = new User()
+            {
+                Email = userInfo.Email,
+                Login = userInfo.Login,
+                Salt = Convert.ToBase64String(salt),
+                PasswordHash = Convert.ToBase64String(hash),
+                UpdDate = DateTime.Now
+            };
+
+            return user;
+        }
+
+        private bool CheckUserPassword(string password,User user)
+        {
+            var salt = Convert.FromBase64String(user.Salt);
+            var hash = Convert.FromBase64String(user.PasswordHash);
+
+            var newHash = PasswordUtil.GenerateSaltedHash(password, salt);
+            return PasswordUtil.CompareByteArrays(hash, newHash);
         }
 
         public void RegisterUser(long userId)//TODO add handler if needed
@@ -126,9 +157,9 @@ namespace Chat.UserManagement
                     rgHandler.Handle(userId);
                 }
             }
-            
+
         }
 
-        
+
     }
 }

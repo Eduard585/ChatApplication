@@ -21,11 +21,15 @@
       </b-form-group>
       <b-button type="submit" variant="primary">Submit</b-button>
     </b-form>
-    <a class="index_registration" href="#/registration">Registration</a>
-    <b-button v-on:click="token" type="submit" variant="primary">Submasdasdit</b-button>
+    <a class="index_registration" href="#/registration">Registration</a>   
   </div>
 </template>
 <script>
+/* eslint-disable */
+import { AUTH_REQUEST } from "@/store/actions/auth";
+import HTTP from "@/utils/axios";
+
+
 export default {
   name: "Login",
   data() {
@@ -39,44 +43,27 @@ export default {
   methods: {
     onSubmit(evt) {
       evt.preventDefault();
-      this.$http
-        .post("access/login", {
+      console.log(this);
+      this.$store
+        .dispatch(AUTH_REQUEST, {
           Login: this.login.login,
           Password: this.login.password
         })
-        .then(function(response) {
-          console.log(response);
+        .then(() => {
+          console.log("davay");
+          this.$router.push("/home");
         });
     },
     onReset(evt) {
       evt.preventDefault();
       this.login.login = "";
-    },
-    token(evt) {
-      var token, authStr;
-      var that = this;
-      this.$http
-        .post("access/token", {
-          Login: "Admin@Admin",
-          Password: "admin"
-        })
-        .then(function(response) {     
-          token = response.data.accessToken;    
-        })
-        .then(function(response){ 
-          that.$http//TODO: change that to something
-            .get("values/getlogin", { headers: { Authorization: authStr } })
-            .then(response => {
-              console.log(response.data);
-            });
-        })
-        
-    }
+    } 
   }
 };
 </script>
 <style>
 .login {
+  text-align:center;
   max-width: 350px;
   margin: auto;
   margin-top: 12px;

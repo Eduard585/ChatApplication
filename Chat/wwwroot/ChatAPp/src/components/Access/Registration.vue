@@ -45,6 +45,7 @@
 </template>
 <script>
 export default {
+  /* eslint-disable */
   name: "Registration",
   data() {
     return {
@@ -98,6 +99,7 @@ export default {
   margin-top: 12px;
   border: 1px solid;
   padding: 10px;
+  text-align:center;
 }
 .password-not-same-warning {
   color: red;

@@ -17,6 +17,7 @@ namespace DAL.UserData
         private const string GetUserByFilterCountCmd = "spGetUsersByFilterCount";
         private const string GetUserByFilterCountORCmd = "spGetUsersByFilterCountOR";
         private const string CheckUserPassrodCmd = "spCheckUserPassword";
+        private const string SaveUserPasswordCmd = "spSaveUserPassword";
         public UserDataProvider()
         {
             _connectionString = ConfigurationAdapter.GetConnectionString("DefaultConnection");
@@ -95,11 +96,12 @@ namespace DAL.UserData
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.CommandText = SaveUserCmd;
                 cmd.Parameters.AddWithValue("@Id", user.Id);
-                cmd.Parameters.AddWithValue("@Login", user.Login);
-                cmd.Parameters.AddWithValue("@Password", user.Password);
+                cmd.Parameters.AddWithValue("@Login", user.Login);             
                 cmd.Parameters.AddWithValue("@Email", user.Email);
                 cmd.Parameters.AddWithValue("@IsBlocked", user.IsBlocked);
                 cmd.Parameters.AddWithValue("@UpdDate", user.UpdDate);
+                cmd.Parameters.AddWithValue("@passwordHash", user.PasswordHash);
+                cmd.Parameters.AddWithValue("@salt", user.Salt);
                 var executeScalar = cmd.ExecuteScalar();
                 return Convert.ToInt64(executeScalar);
             }
@@ -121,6 +123,23 @@ namespace DAL.UserData
             }
         }
 
+        public bool SaveUserPassword(string login, string passwordHash, string salt)
+        {
+            using (var connection = new SqlConnection(_connectionString))
+            using (var cmd = connection.CreateCommand())
+            {
+                connection.Open();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = SaveUserPasswordCmd;
+                cmd.Parameters.AddWithValue("@login", login);
+                cmd.Parameters.AddWithValue("@passwordHash", passwordHash);
+                cmd.Parameters.AddWithValue("@salt", salt);
+
+                var executeScalar = cmd.ExecuteScalar();
+                return Convert.ToBoolean(executeScalar);
+            }
+        }
+
         private User ReadUser(SqlDataReader reader)
         {
             var user = new User();
@@ -130,6 +149,8 @@ namespace DAL.UserData
             user.Email = reader.GetStringInc(ref ord);
             user.IsBlocked = reader.GetBooleanInc(ref ord);
             user.UpdDate = reader.GetDateTimeInc(ref ord);
+            user.PasswordHash = reader.GetStringInc(ref ord);
+            user.Salt = reader.GetStringInc(ref ord);
             return user;
         }
     }

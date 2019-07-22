@@ -1,8 +1,28 @@
 <template>
-    <h1>Hello, you are on home page</h1>
+  <div>
+    <h1>Hello!</h1>
+    <br />
+    <h1>Hello!</h1>
+    <br />
+    <h1>Hello!</h1>
+    <br />
+    <h1>Hello!</h1>
+    <br />
+    <h1>Hello!</h1>
+    <br />
+    <h1>Hello!</h1>
+    <br />
+    <h1>Hello!</h1>
+    <br />
+    <h1>Hello!</h1>
+    <br />
+    <h1>Hello!</h1>
+    <br />
+    <h1>Hello!</h1>
+    <br />
+    <h1>Hello!</h1>
+    <br />
+    <h1>Hello!</h1>
+    <br />
+  </div>
 </template>
-<script>
-export default {
-    name:"Home"
-}
-</script>
