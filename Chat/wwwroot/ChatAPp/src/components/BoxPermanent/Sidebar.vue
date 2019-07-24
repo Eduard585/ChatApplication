@@ -4,7 +4,7 @@
             <nav>
                 <ol>
                     <li id="l_messages">
-                        <v-list-item title="Сообщения"></v-list-item>
+                        <v-list-item title="Сообщения" url="#/rooms"></v-list-item>
                     </li>
                     <li id="l_messages">
                         <v-list-item title="Что то еще"></v-list-item>

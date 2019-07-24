@@ -6,6 +6,7 @@ import Registration from '@/components/Access/Registration'
 
 import Home from '@/components/HomePage/Home'
 import RoomList from '@/components/Messaging/RoomList'
+import RoomsUserList from '@/components/Messaging/RoomsUserList'
 import store from '@/store'
 Vue.use(Router)
 
@@ -33,6 +34,11 @@ const router =  new Router({
       name:'RoomList',
       component:RoomList,
       meta:{requiresAuth:true}      
+    },
+    {
+      path:'/rooms/userList',
+      name:'RoomsUserList',
+      component:RoomsUserList
     }
   ]
 })

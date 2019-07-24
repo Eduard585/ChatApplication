@@ -3367,7 +3367,7 @@
           "ref/netstandard1.3/System.Console.dll": {}
         }
       },
-      "System.Data.SqlClient/4.6.0": {
+      "System.Data.SqlClient/4.6.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Win32.Registry": "4.5.0",
@@ -4754,7 +4754,8 @@
         "framework": ".NETCoreApp,Version=v2.2",
         "dependencies": {
           "Microsoft.Extensions.Configuration": "2.2.0",
-          "System.Configuration.ConfigurationManager": "4.5.0"
+          "System.Configuration.ConfigurationManager": "4.5.0",
+          "System.Data.SqlClient": "4.6.1"
         },
         "compile": {
           "bin/placeholder/ChatAppUtils.dll": {}
@@ -8990,10 +8991,10 @@
         "system.console.nuspec"
       ]
     },
-    "System.Data.SqlClient/4.6.0": {
-      "sha512": "gwItUWW1BMCckicFO85c8frFaMK8SGqYn5IeA3GSX4Lmid+CjXETfoHz7Uv+Vx6L0No7iRc/7cBL8gd6o9k9/g==",
+    "System.Data.SqlClient/4.6.1": {
+      "sha512": "7MTJhBFt4/tSJ2VRpG+TQNPcDdbCnWuoYzbe0kD5O3mQ7aZ2Q+Q3D9Y5Y3/aper5Gp3Lrs+8edk9clvxyPYXPw==",
       "type": "package",
-      "path": "system.data.sqlclient/4.6.0",
+      "path": "system.data.sqlclient/4.6.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -9058,7 +9059,7 @@
         "runtimes/win/lib/netstandard1.3/System.Data.SqlClient.dll",
         "runtimes/win/lib/netstandard2.0/System.Data.SqlClient.dll",
         "runtimes/win/lib/uap10.0.16299/System.Data.SqlClient.dll",
-        "system.data.sqlclient.4.6.0.nupkg.sha512",
+        "system.data.sqlclient.4.6.1.nupkg.sha512",
         "system.data.sqlclient.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -12893,7 +12894,7 @@
       ]
     },
     "System.Xml.XmlSerializer/4.3.0": {
-      "sha512": "MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
+      "sha512": "VShQJhOxgD/5M2Z1IWm1vMaSqlbjo1zdFf8H7Ahte6bTvSUhUko/gDpAVVhGgGgTDeue4QyNg1fu1Zz2GKSEuQ==",
       "type": "package",
       "path": "system.xml.xmlserializer/4.3.0",
       "files": [
@@ -13063,7 +13064,7 @@
   },
   "packageFolders": {
     "C:\\Users\\Semenkin.E\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Program Files (x86)\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
@@ -13075,7 +13076,7 @@
       "outputPath": "C:\\Users\\Semenkin.E\\Source\\Repos\\Chat\\Chat\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\Semenkin.E\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -13086,7 +13087,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Users\\Semenkin.E\\Source\\Repos\\ChatApp\\ChatApp\\obj": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

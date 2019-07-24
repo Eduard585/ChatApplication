@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import SideBar from "./components/Controls/Sidebar";
-import Header from "./components/Controls/Header";
+import SideBar from "./components/BoxPermanent/Sidebar";
+import Header from "./components/BoxPermanent/Header";
 export default {
   name: "App",
   data() {

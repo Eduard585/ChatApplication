@@ -16,7 +16,7 @@ namespace DAL.UserData
         private const string GetUserByFilterCmd = "spGetUsersByFilter";
         private const string GetUserByFilterCountCmd = "spGetUsersByFilterCount";
         private const string GetUserByFilterCountORCmd = "spGetUsersByFilterCountOR";
-        private const string CheckUserPassrodCmd = "spCheckUserPassword";
+        private const string CheckUserPasswordCmd = "spCheckUserPassword";
         private const string SaveUserPasswordCmd = "spSaveUserPassword";
         public UserDataProvider()
         {
@@ -77,8 +77,7 @@ namespace DAL.UserData
             {
                 connection.Open();
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = GetUserByFilterCountORCmd;                
-                cmd.Parameters.AddWithValue("@Id", filter.Id);
+                cmd.CommandText = GetUserByFilterCountORCmd;                               
                 cmd.Parameters.AddWithValue("@Login", filter.Login);
                 cmd.Parameters.AddWithValue("@Email", filter.Email);                
 
@@ -114,7 +113,7 @@ namespace DAL.UserData
             {
                 connection.Open();
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = CheckUserPassrodCmd;               
+                cmd.CommandText = CheckUserPasswordCmd;               
                 cmd.Parameters.AddWithValue("@login", login);                
                 cmd.Parameters.AddWithValue("@password", password);
                 

@@ -27,7 +27,6 @@
 <script>
 /* eslint-disable */
 import { AUTH_REQUEST } from "@/store/actions/auth";
-import HTTP from "@/utils/axios";
 
 
 export default {
