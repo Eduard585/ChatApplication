@@ -4,7 +4,10 @@ using System.Text;
 
 namespace DAL.Models
 {
-    class Friend
+    public class Friend
     {
+        public long Id { get; set; }
+        public string Login { get; set; }
+
     }
 }

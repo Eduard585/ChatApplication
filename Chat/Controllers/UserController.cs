@@ -5,22 +5,21 @@ using Chat.ViewModels;
 using DAL.Models;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Chat.Controllers
 {
     [Route("api/user")]
+    [EnableCors("MyPolicy")]
+    [Authorize]
     [ApiController]
     
     public class UserController : ControllerBase
     {
         private readonly UserManager _userManager = new UserManager();
-        [EnableCors("MyPolicy")]
-        [HttpPost("registration")]
-        public  IActionResult Registration([FromBody]RestUserRegistrationInfo userModel)
-        {           
-            var registrationResult = _userManager.CreateUser(userModel);
-            return Ok(registrationResult);
-        }
+        
+        
+        
 
         
 

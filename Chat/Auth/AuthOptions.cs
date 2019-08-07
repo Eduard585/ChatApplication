@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.IdentityModel.Tokens;
 namespace Chat.Auth
 {
-    public class AuthOptions
+    public static class AuthOptions
     {
         public const string ISSUER = "MyAuthServer"; // издатель токена
         public const string AUDIENCE = "http://localhost:8080/"; // потребитель токена

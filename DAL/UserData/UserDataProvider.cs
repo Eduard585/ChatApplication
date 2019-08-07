@@ -137,7 +137,7 @@ namespace DAL.UserData
                 var executeScalar = cmd.ExecuteScalar();
                 return Convert.ToBoolean(executeScalar);
             }
-        }
+        }      
 
         private User ReadUser(SqlDataReader reader)
         {

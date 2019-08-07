@@ -13,10 +13,14 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Net;
 
 namespace Chat.Controllers
 {
     [Route("api/access")]
+    [EnableCors("MyPolicy")]//TODO how to use tokens and login
     [ApiController]
     public class AccessController : Controller
     {
@@ -26,12 +30,20 @@ namespace Chat.Controllers
             return View("Index", new Dictionary<string, object> {{"layout", "_AuthLayout"}});
         }
 
-        [EnableCors("MyPolicy")]
+        [HttpPost("registration")]
+        public IActionResult Registration([FromBody]RestUserRegistrationInfo userModel)
+        {
+            var registrationResult = _userManager.CreateUser(userModel);
+            return Ok(registrationResult);
+        }
+
+        
         [HttpPost("login")]
         public IActionResult Login([FromBody] RestUserLogin userLogin)
         {
             var login = userLogin.Login;
             var password = userLogin.Password;
+            var response = new HttpResponseMessage();
 
             var loginResult = _userManager.Login(login, password);
             if (!loginResult.Success)
@@ -39,17 +51,15 @@ namespace Chat.Controllers
                 Response.StatusCode = 400;
                 return BadRequest(loginResult.Error);
             }
-            var response = CreateRestToken(loginResult);
-            Response.ContentType = "application/json";
+            var restToken = CreateRestToken(loginResult);
+
             return Ok(new RestToken
             {
-                AccessToken = response.AccessToken,
+                AccessToken = restToken.AccessToken,
                 ExpiresIn = 1000
             });
-
         }
-
-        [EnableCors("MyPolicy")]//TODO how to use tokens and login
+      
         [HttpPost("token")]
         public IActionResult Token([FromBody] RestUserLogin userLogin)
         {
@@ -97,7 +107,7 @@ namespace Chat.Controllers
         {
             var claims = new List<Claim>
             {
-                new Claim(ClaimsIdentity.DefaultNameClaimType, loginResult.UserName)
+                new Claim(ClaimTypes.NameIdentifier, loginResult.UserId.ToString())
             };
             ClaimsIdentity claimsIdentity = new ClaimsIdentity(claims, "Token",
                 ClaimsIdentity.DefaultNameClaimType,

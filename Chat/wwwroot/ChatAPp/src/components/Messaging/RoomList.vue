@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button v-on:click="toggleUsers">Start chat</button>
+    <a href="#/rooms/userList">asdasdasd</a>
     <div class="room-list" v-if="!showUsers">
       <h1>ROOMLIST</h1>
       <h1>ROOMLIST</h1>
@@ -35,7 +35,7 @@ export default {
   },
   methods:{
     toggleUsers(){
-      
+      HTTP.get('/')
       this.showUsers = !this.showUsers;
     }
   }

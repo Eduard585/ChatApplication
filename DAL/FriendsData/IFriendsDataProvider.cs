@@ -6,5 +6,6 @@ namespace DAL.FriendsData
 {
     interface IFriendsDataProvider
     {
+        List<Models.Friend> GetUserFriends(long userId);       
     }
 }

@@ -59,4 +59,16 @@ export default {
 div{
 border: 1px solid #000000;
 }
+
+ul{
+  list-style-type: none;
+}
+
+.checked{
+  background: url(assets/checkbox-checked.svg); 
+}
+
+.unchecked{
+  background: url(assets/checkbox-unchecked.svg); 
+}
 </style>

@@ -6,6 +6,7 @@ import {
 } from '../actions/auth';
 import {USER_REQUEST} from '../actions/user'
 import HTTP from '@/utils/axios';
+
 const state = {
   token: localStorage.getItem('user-token') || '',
   status: '',
@@ -27,8 +28,7 @@ const actions = {
           localStorage.setItem('user-token', response.data.accessToken);
           console.log(localStorage.getItem('user-token'))
           HTTP.setAuthorizationHeader(response.data.accessToken)          
-          commit(AUTH_SUCCESS, response); // TODO: reposnse.??
-          //dispatch(USER_REQUEST);
+          commit(AUTH_SUCCESS, response); // TODO: reposnse.??        
           resolve(response);
         })
         .catch(err => {
