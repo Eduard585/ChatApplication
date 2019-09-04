@@ -1,17 +1,12 @@
 ﻿using Chat.Auth;
 using ChatAppUtils.Configuration;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
-using System;
-using System.Security.Claims;
-using System.Text;
 
 namespace Chat
 {
@@ -61,7 +56,7 @@ namespace Chat
                     .Build();
             });
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc();
 
 
             //var tokenValidationParameters = new TokenValidationParameters
@@ -106,7 +101,11 @@ namespace Chat
 
             app.UseCors("MyPolicy");
 
-              
+            app.UseAuthentication();
+
+            app.UseHttpsRedirection();
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
         }
     }
 }

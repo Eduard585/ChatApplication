@@ -32,7 +32,7 @@ export default {
   beforeCreate() {
     HTTP.get("im/friends").then(response => {
       response.data.forEach(element => {
-        item={
+        var item={
             login:element.login,
             enabled:false
         }

@@ -29,6 +29,7 @@ namespace Chat.Controllers
             return Ok(asd);
         }
 
+        [Authorize]
         [HttpGet("friends")]
         public IActionResult GetMyFriends()
         {
