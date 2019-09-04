@@ -27,7 +27,7 @@ namespace Chat
             {
                 builder.AllowAnyOrigin()
                     .AllowAnyMethod()
-                    .AllowAnyHeader();
+                    .AllowAnyHeader();//asdas
             }));
 
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
