@@ -56,7 +56,7 @@ namespace Chat.Controllers
             return Ok(new RestToken
             {
                 AccessToken = restToken.AccessToken,
-                ExpiresIn = 1000
+                ExpiresIn = 1000000
             });
         }
       
@@ -77,7 +77,7 @@ namespace Chat.Controllers
             return Ok(new RestToken
             {
                 AccessToken = response.AccessToken,
-                ExpiresIn = 1000
+                ExpiresIn = 1000000
             });
         }
 

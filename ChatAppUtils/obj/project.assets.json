@@ -1407,23 +1407,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Semenkin.E\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\user\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Semenkin.E\\Source\\Repos\\Chat\\ChatAppUtils\\ChatAppUtils.csproj",
+      "projectUniqueName": "D:\\Prog\\Chat\\ChatApplication\\ChatAppUtils\\ChatAppUtils.csproj",
       "projectName": "ChatAppUtils",
-      "projectPath": "C:\\Users\\Semenkin.E\\Source\\Repos\\Chat\\ChatAppUtils\\ChatAppUtils.csproj",
-      "packagesPath": "C:\\Users\\Semenkin.E\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Semenkin.E\\Source\\Repos\\Chat\\ChatAppUtils\\obj\\",
+      "projectPath": "D:\\Prog\\Chat\\ChatApplication\\ChatAppUtils\\ChatAppUtils.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "D:\\Prog\\Chat\\ChatApplication\\ChatAppUtils\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Semenkin.E\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

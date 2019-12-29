@@ -15,6 +15,7 @@ namespace Chat.Controllers
     [Route("api/im")]   
     [EnableCors("MyPolicy")]  
     [ApiController]
+    [Authorize]
     public class ImController : ControllerBase
     {
         private UserManager _userManager = new UserManager();
@@ -28,13 +29,6 @@ namespace Chat.Controllers
             JsonResult asd = new JsonResult("asda");
             return Ok(asd);
         }
-
-        [HttpGet("friends")]
-        public IActionResult GetMyFriends()
-        {
-            var userId = _userIdentity.GetUserId(User);
-            var friends =_friendsManager.GetFriends(userId);
-            return Ok(friends);
-        }
+      
     }
 }

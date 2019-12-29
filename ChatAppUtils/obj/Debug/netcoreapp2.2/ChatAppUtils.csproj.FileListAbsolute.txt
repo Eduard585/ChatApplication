@@ -9,3 +9,14 @@ C:\Users\Semenkin.E\Source\Repos\Chat\ChatAppUtils\obj\Debug\netcoreapp2.2\ChatA
 C:\Users\Semenkin.E\Source\Repos\Chat\ChatAppUtils\bin\Debug\netcoreapp2.2\ChatAppUtils.pdb
 C:\Users\Semenkin.E\Source\Repos\Chat\ChatAppUtils\obj\Debug\netcoreapp2.2\ChatAppUtils.dll
 C:\Users\Semenkin.E\Source\Repos\Chat\ChatAppUtils\obj\Debug\netcoreapp2.2\ChatAppUtils.pdb
+D:\Prog\Chat\ChatApplication\ChatAppUtils\bin\Debug\netcoreapp2.2\ChatAppUtils.deps.json
+D:\Prog\Chat\ChatApplication\ChatAppUtils\bin\Debug\netcoreapp2.2\ChatAppUtils.runtimeconfig.json
+D:\Prog\Chat\ChatApplication\ChatAppUtils\bin\Debug\netcoreapp2.2\ChatAppUtils.runtimeconfig.dev.json
+D:\Prog\Chat\ChatApplication\ChatAppUtils\bin\Debug\netcoreapp2.2\ChatAppUtils.dll
+D:\Prog\Chat\ChatApplication\ChatAppUtils\bin\Debug\netcoreapp2.2\ChatAppUtils.pdb
+D:\Prog\Chat\ChatApplication\ChatAppUtils\obj\Debug\netcoreapp2.2\ChatAppUtils.csprojAssemblyReference.cache
+D:\Prog\Chat\ChatApplication\ChatAppUtils\obj\Debug\netcoreapp2.2\ChatAppUtils.csproj.CoreCompileInputs.cache
+D:\Prog\Chat\ChatApplication\ChatAppUtils\obj\Debug\netcoreapp2.2\ChatAppUtils.AssemblyInfoInputs.cache
+D:\Prog\Chat\ChatApplication\ChatAppUtils\obj\Debug\netcoreapp2.2\ChatAppUtils.AssemblyInfo.cs
+D:\Prog\Chat\ChatApplication\ChatAppUtils\obj\Debug\netcoreapp2.2\ChatAppUtils.dll
+D:\Prog\Chat\ChatApplication\ChatAppUtils\obj\Debug\netcoreapp2.2\ChatAppUtils.pdb
