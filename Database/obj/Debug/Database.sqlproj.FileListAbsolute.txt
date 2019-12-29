@@ -1,0 +1,10 @@
+D:\Prog\Chat\ChatApplication\Database\bin\Debug\Database.dacpac
+D:\Prog\Chat\ChatApplication\Database\bin\Debug\Database.dll
+D:\Prog\Chat\ChatApplication\Database\bin\Debug\Database.pdb
+D:\Prog\Chat\ChatApplication\Database\obj\Debug\Database.sqlprojAssemblyReference.cache
+D:\Prog\Chat\ChatApplication\Database\obj\Debug\Model.xml
+D:\Prog\Chat\ChatApplication\Database\obj\Debug\refactor.xml
+D:\Prog\Chat\ChatApplication\Database\obj\Debug\postdeploy.sql
+D:\Prog\Chat\ChatApplication\Database\obj\Debug\predeploy.sql
+D:\Prog\Chat\ChatApplication\Database\obj\Debug\Database.dll
+D:\Prog\Chat\ChatApplication\Database\obj\Debug\Database.pdb

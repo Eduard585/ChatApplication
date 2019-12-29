@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[Rooms](
+	[Id] [bigint] NOT NULL IDENTITY,
+	[Name] [nvarchar](50) NULL,
+	[CreateDate] [datetime] NULL,
+	[IsActive] [bit] NULL,
+ CONSTRAINT [PK_Rooms] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
